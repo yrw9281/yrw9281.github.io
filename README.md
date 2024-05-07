@@ -1,4 +1,4 @@
-## Welcome to My Notes.
+# Welcome to My Notes
 
 A [notebook](https://yrw9281.github.io/) to prevent forgetting.
 
