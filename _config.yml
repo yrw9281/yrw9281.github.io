@@ -1,9 +1,9 @@
 title: Keep Note 
 description: "A Notebook to Prevent Forgetting"
 author:
-  name: "yrwww"
+  name: "yrw9281"
   email: ""
-  url: "https://github.com/yrwww/yrwww.github.io"
+  url: "https://github.com/yrw9281/yrw9281.github.io"
 
 baseurl: /
 
@@ -28,5 +28,5 @@ plugins:
   - jekyll-sitemap
 
 # Custom variables
-owner : "yrwww"
+owner : "yrw9281"
 year : "2024"

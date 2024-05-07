@@ -1,7 +1,7 @@
 <footer>
-  <a href="https://github.com/yrwww">
+  <a href="{{ site.author.url }}">
     <span>
-        <b>{{ site.owner }}</b>
+        {{ site.owner }}
     </span>
     {% capture currentyear %}{{ 'now' | date: "%Y" }}{% endcapture %}
     <span>© {{ currentyear }}</span>

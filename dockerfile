@@ -10,3 +10,5 @@ RUN gem install jekyll jekyll-seo-tag jekyll-paginate jekyll-sitemap
 EXPOSE 4000
 # Run Jekyll server when the container launches
 CMD ["jekyll", "serve", "--host", "0.0.0.0"]
+# DOCKER RUN with volume
+#docker run -p 4000:4000 -v .:/app keepnote

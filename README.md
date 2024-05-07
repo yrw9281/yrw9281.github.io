@@ -1,6 +1,6 @@
 ## Welcome to My Notes.
 
-A [notebook](https://yrwww.github.io/) to prevent forgetting.
+A [notebook]({ site.baseurl }) to prevent forgetting.
 
 ## Reference
 
