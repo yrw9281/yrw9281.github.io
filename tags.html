@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% assign alldocs = site.documents %}
+{% assign alltags =  alldocs | map: 'tags' | join: ','  | split: ','  | group_by_exp: "tag","tag" | sort: 'name' %}
+
+<h1>Tag List</h1>
+<p>
+  Click on any tag to find all the related articles with that tag.
+</p>
+<ul>
+    {% for tag in alltags %}
+    	<li><a href="#{{ tag.name | slugify }}">{{ tag.name }}</a><span> ({{ tag.size }})</span></li>
+    {% endfor %}
+  {% assign tags_list = nil %}
+</ul>
+<hr />
+{% for tag in alltags %}
+  <h2 id="{{ tag.name }}">{{ tag.name }}</h2>
+  <ul>
+    {%- for document in alldocs -%}
+      {% if document.tags contains tag.name %}
+        <li><a href="{{ document.url }}">{{ document.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
