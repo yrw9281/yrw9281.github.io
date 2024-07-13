@@ -27,16 +27,16 @@ This is a mechanism used in databases to control simultaneous access to data wit
 It is used to define the visibility of a transaction to other transactions when reading data.
 
 - **READ UNCOMMITTED**:
-There can be dirty reads because some transactions are not yet complete and do not guarantee ACID consistency.
+Dirty reads can occur because transactions that have not yet been completed can be read, leading to potential inconsistencies since these transactions do not guarantee ACID properties.
 
 - **READ COMMITTED**:
 There are no dirty reads, but if we read twice within the same transaction, we may get different results due to the time difference, known as non-repeatable reads.
 
 - **REPEATABLE READ**:
-After starting a transaction, the first read will apply a shared lock to the read values, meaning no one can change these data. This ensures that all data within this transaction are complete, except for inserts. New data inserted while the transaction is in progress may not be captured, leading to potentially incorrect transaction calculations, known as phantom reads.
+This isolation level prevents non-repeatable reads by applying a shared lock on all data read by a transaction. This ensures that the data read within the transaction remains consistent for the duration of the transaction. However, new data inserted by other transactions can still be seen, leading to potential phantom reads.
 
 - **SERIALIZABLE**:
-After starting a transaction, it will lock a large range of data, preventing inserts into the reading range, ensuring that all calculations within the transaction are definitely correct.
+This isolation level ensures that all transactions are executed in a completely isolated manner, as if they were executed one after the other in a serial order. It prevents dirty reads, non-repeatable reads, and phantom reads by locking the entire range of data read by the transaction, including preventing new inserts within that range.
 
 ## Optimistic/Pessimistic Lock
 
