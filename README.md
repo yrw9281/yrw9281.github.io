@@ -1,11 +1,7 @@
-# Welcome to My Notes
+# Welcome to My Keep Notes
 
 A [notebook](https://yrw9281.github.io/) to prevent forgetting.
 
-## Reference
+## Theme
 
-It is based on the [hacker-blog](https://github.com/tocttou/hacker-blog) and [hacker-theme](https://github.com/pages-themes/hacker).
-
-## License
-
-CC0 1.0 Universal
+Free to utilize the theme [here](https://github.com/yrw9281/jekyll-theme-hacker-blog).
