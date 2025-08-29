@@ -86,7 +86,7 @@ Insert dummy data to test the Encryption working properly.
 
 ## Usage
 
-### Read Encrypted data using EF withg AzureKeyVaultProvider
+### Read Encrypted data using EF with AzureKeyVaultProvider
 
 To read and write encrypted data using Entity Framework (EF), you can use the OnModelCreating method in your DbContext class. Here's an example:
 
@@ -164,7 +164,7 @@ namespace TypedRepository
 Console.WriteLine("=== Connect and register on connection ===");
 
 Dictionary<string, SqlColumnEncryptionKeyStoreProvider> customKeyStoreProviders = new Dictionary<string, SqlColumnEncryptionKeyStoreProvider>();
-ClientSecretCredential clientSecretCredential = new ClientSecretCredential(TENANT_ID, CLIENT_ID, CLIENT_SECTET);
+ClientSecretCredential clientSecretCredential = new ClientSecretCredential(TENANT_ID, CLIENT_ID, CLIENT_SECRET);
 SqlColumnEncryptionAzureKeyVaultProvider azureKeyVaultProvider = new SqlColumnEncryptionAzureKeyVaultProvider(clientSecretCredential);
 customKeyStoreProviders.Add(SqlColumnEncryptionAzureKeyVaultProvider.ProviderName, azureKeyVaultProvider);
 SqlConnection.RegisterColumnEncryptionKeyStoreProviders(customKeyStoreProviders);
